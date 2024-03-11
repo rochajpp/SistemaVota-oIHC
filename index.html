@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Sistema de Votação de Grêmio</title>
+</head>
+<body onload="listOptions()">
+    <main>
+        <div class="main-container">
+            <form>
+                <h1>Cadastro de Grêmio</h1>
+                <div class="input-area">
+                    <label>Número da chapa</label>
+                    <input type="number" id="number" placeholder="Digite o número da chapa" required />
+                </div>
+
+                <div class="input-area">
+                    <label>Nome da chapa:</label>
+                    <input type="text" id="name" placeholder="Digite o nome da chapa" required />
+                </div>       
+                
+                <button type="button" onclick="register()">Cadastrar</button>
+                <span id="registerErr">Número já registrado!</span>
+                <span id="registerErr2">Preencha todos os campos!</span>
+            </form>
+
+
+            <form>
+                <h1>Sistema de Votação</h1>
+                <select id="option"></select>
+                
+                <button type="button" onclick="addVote()">Enviar</button>
+                
+                
+            </form>
+
+
+            <div class="result" id="result">
+                <h1>Resultado</h1>
+                <div class="list" id="list">
+                    
+                </div>
+                <button type="button" onclick="result()">Ver resultados</button>
+            </div>
+
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
