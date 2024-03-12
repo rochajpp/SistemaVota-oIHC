@@ -81,7 +81,7 @@ function result(){
     }
 
     if(count == 0){
-        const empty = document.createElement("li")
+        const empty = document.createElement("p")
         empty.innerHTML = "Nenhum voto registrado!";
         
         component.appendChild(empty);
