@@ -31,9 +31,15 @@ function listOptions(){
 
 function addVote(){
     const option = document.querySelector("#option").value;
+    const sucess = document.querySelector("#voteSucess");
 
     votes[option].quant++;
-    console.log(votes[option]);
+    sucess.style.bottom = "0rem";
+
+    setTimeout(() => {
+        sucess.style.bottom = "-10rem"
+    }, 2000);
+
     return;
 }
 
@@ -67,6 +73,13 @@ function register(){
     votes[count] = {id: count, name: name, number: number, quant: 0};
     count ++;
 
+    const sucess = document.querySelector("#registerSucess");
+
+    sucess.style.bottom = "0rem";
+
+    setTimeout(() => {
+        sucess.style.bottom = "-10rem";
+    }, 2000);
     listOptions();
     return;
 }
